@@ -1,0 +1,45 @@
+{% extends "intra_app/base.html" %} {% load static %} {% block content %}
+<div>
+  <div class="my-title">
+    <h2>ICT Policies</h2>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Ref Number</th>
+        <th scope="col">Document Name</th>
+        <th scope="col">Document Description</th>
+        <th scope="col">Approval Date</th>
+        <th scope="col">Council Resolution Number</th>
+        <th scope="col">Status</th>
+        <th scope="col">Document</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for policy in policies %}
+      <tr>
+        <td>{{ policy.ref_number }}</td>
+        <td>{{ policy.document_name }}</td>
+        <td>{{ policy.document_description }}</td>
+        <td>{{ policy.approval_date }}</td>
+        <td>{{ policy.council_resolution_number }}</td>
+        {% if policy.status == "Approved" %}
+        <td><span class="badge bg-success">{{ policy.status }}</span></td>
+        {% elif policy.status == "Under_review" %}
+        <td>
+          <span class="badge bg-warning text-dark">{{ policy.status }}</span>
+        </td>
+        {% else %}
+        <td><span class="badge bg-secondary">{{ policy.status }}</span></td>
+        {% endif %}
+        <td>
+          <a href="{% url 'download_document' pk=policy.pk %}"
+            >{{ policy.document_name }}</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends "intra_app/base.html" %} {% load static %} {% block content %}
+<div class="container-fluid header bg-white p-0">
+  <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+    <div class="col-md-6 p-5 mt-lg-5">
+      <h1 class="display-5 animated fadeIn mb-4">
+        Rand <span class="text-primary">West City</span> Local Municipality
+      </h1>
+      <p class="animated fadeIn mb-4 pb-2">
+        Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd
+        rebum ipsum et diam justo clita et kasd rebum sea elitr.
+      </p>
+      <a href="" class="btn btn-primary py-3 px-5 me-3 animated fadeIn"
+        >Get Started</a
+      >
+    </div>
+    <div class="col-md-6 animated fadeIn">
+      <div class="owl-carousel header-carousel">
+        <div class="owl-carousel-item">
+          <img
+            class="img-fluid"
+            src="{% static 'img/carousel-1.jpg' %}"
+            alt=""
+          />
+        </div>
+        <div class="owl-carousel-item">
+          <img
+            class="img-fluid"
+            src="{% static 'img/carousel-2.jpg' %}"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="bg-light rounded p-3">
+      <div
+        class="bg-white rounded p-4"
+        style="border: 1px dashed rgba(0, 185, 142, 0.3)"
+      >
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+            <img
+              class="img-fluid rounded w-100"
+              src="{% static 'img/call-to-action.jpg' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <div class="mb-4">
+              <h1 class="mb-3">Contact With Our Helpdesk</h1>
+            </div>
+            <a href="" class="btn btn-primary py-3 px-4 me-2"
+              ><i class="fa fa-phone-alt me-2"></i>Log a Ticket</a
+            >
+            <a href="" class="btn btn-dark py-3 px-4"
+              ><i class="fa fa-calendar-alt me-2"></i>Send a Email</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-xxl py-5">
+  <div class="container">
+    <div
+      class="text-center mx-auto mb-5 wow fadeInUp"
+      data-wow-delay="0.1s"
+      style="max-width: 600px"
+    >
+      <h1 class="mb-3">Executive Management Team</h1>
+      <p>
+        Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore
+        lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero
+        dolor duo.
+      </p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="team-item rounded overflow-hidden">
+          <div class="position-relative">
+            <img class="img-fluid" src="{% static 'img/team-1.jpg' %}" alt="" />
+          </div>
+          <div class="text-center p-4 mt-3">
+            <h5 class="fw-bold mb-0">Full Name</h5>
+            <small>Designation</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
