@@ -1,0 +1,25 @@
+{% extends "intra_app/base.html" %} {% load static %} {% block content %}
+<div>
+  <div class="my-title">
+    <h2>RWCLM Policies</h2>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Department</th>
+        <th scope="col">Link to Policies</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>HR Policies</td>
+        <td><a href="{% url 'hr' %}">Click to View</a></td>
+      </tr>
+      <tr>
+        <td>ICT Policies</td>
+        <td><a href="{% url 'ict' %}">Click to View</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{% endblock %}

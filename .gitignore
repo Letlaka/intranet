@@ -153,3 +153,4 @@ cython_debug/
 
 backupdata/
 topchow.code-workspace
+.env
