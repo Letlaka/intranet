@@ -33,9 +33,7 @@
         <td><span class="badge bg-secondary">{{ policy.status }}</span></td>
         {% endif %}
         <td>
-          <a href="{% url 'download_document' pk=policy.pk %}"
-            >{{ policy.document_name }}</a
-          >
+          <a href="{% url 'download_document' pk=policy.pk %}" target="_blank">{{ policy.document_name }}</a>
         </td>
       </tr>
       {% endfor %}
